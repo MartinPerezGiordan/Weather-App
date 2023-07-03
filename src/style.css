@@ -94,3 +94,25 @@ footer{
     font-size: .5em;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .github-icon {
+    display: inline-block;
+    margin-right: 3px;
+    width: 15px;
+    height: 15px;
+    background-image: url("github-mark.png"); /* Replace with your own icon image */
+    background-size: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+ .github-icon:hover {
+    transform: rotate(360deg);
+  }
+
+  a:hover .github-icon {
+    transform: rotate(360deg);
+  }

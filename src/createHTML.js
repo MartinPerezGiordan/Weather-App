@@ -30,7 +30,10 @@ function createMain(){
 function createFooter(){
     const footer = document.createElement('footer');
     footer.id = 'footer';
-    footer.textContent = 'Footer content';
+    footer.innerHTML = `<a href="https://github.com/MartinPerezGiordan" target="_blank">
+    <span class="github-icon"></span>
+    Martin Perez
+  </a>`
     document.body.appendChild(footer);
 }
 

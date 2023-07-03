@@ -10,11 +10,23 @@ document.addEventListener('DOMContentLoaded', async () => {
     displayWeather(await getWeather('Montevideo'))
 
     const searchBtn = document.querySelector('#search-button');
-    searchBtn.addEventListener('click', async ()=>{
-        const searchInput = document.querySelector('#search-input')
+    const searchInput = document.querySelector('#search-input')
+
+    searchBtn.addEventListener('click', handleClick);
+    searchInput.addEventListener('keypress', handleKeyPress);
+
+
+    async function handleClick(){
         const inputValue = searchInput.value 
         console.log(await getWeather(inputValue));
         displayWeather(await getWeather(inputValue))
-    })
-  
+    }
+
+    function handleKeyPress(event) {
+        if (event.key === 'Enter') {
+          handleClick();
+        }
+    }
+
+
 });
