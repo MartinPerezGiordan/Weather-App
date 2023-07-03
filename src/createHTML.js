@@ -12,15 +12,18 @@ function createHeader(){
 function createMain(){
     const mainContent = document.createElement('div');
     mainContent.id = 'main-content';
+    const searchBar = document.createElement('div');
+    searchBar.id = 'search-bar';
     const searchInput = document.createElement('input');
     searchInput.type = 'text';
     searchInput.id = 'search-input';
-    searchInput.placeholder = 'Search';
-    mainContent.appendChild(searchInput);
+    searchInput.placeholder = 'Pick a location';
     const searchButton = document.createElement('button');
     searchButton.id = 'search-button';
     searchButton.textContent = 'Search';
-    mainContent.appendChild(searchButton);
+    searchBar.appendChild(searchInput);
+    searchBar.appendChild(searchButton);
+    mainContent.appendChild(searchBar);
     document.body.appendChild(mainContent);
 }
 
